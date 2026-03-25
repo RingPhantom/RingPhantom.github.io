@@ -24,12 +24,16 @@
         <div style="margin: 20px 0; border-top: 1px solid #eee; padding-top: 20px; text-align: left;">
             <h3 style="font-size: 16px; color: #24292f;">最近博文：</h3>
             <ul style="list-style: none; padding: 0;">
+                {% for post in site.posts %}
                 <li style="margin-bottom: 10px;">
-                    <a href="blog1.html" style="color: #0969da; text-decoration: none; font-size: 15px;">🚀 我的第一篇博文：从零开始的建站之路</a>
+                    <a href="{{ post.url }}" style="color: #0969da; text-decoration: none; font-size: 15px;">
+                        🚀 {{ post.title }} 
+                        <span style="color: #8c959f; font-size: 12px;">({{ post.date | date: "%Y-%m-%d" }})</span>
+                    </a>
                 </li>
-                <li style="margin-bottom: 10px;">
-                    <a href="_posts/2026-03-25-test20260325.md" style="color: #0969da; text-decoration: none; font-size: 15px;">🚀 用Markdown进行写作</a>
-                </li>
+                {% endfor %}
+            </ul>
+        </div>
             </ul>
         </div>
         <div class="links">
