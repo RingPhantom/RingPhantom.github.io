@@ -8,6 +8,15 @@
         .back { display: block; margin-bottom: 20px; text-decoration: none; color: #2f81f7; }
         h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
         .content { background: #fff; }
+        /* 让博文里的图片自适应宽度，且最大不超过容器 */
+        .content img {
+            max-width: 100%;    /* 防止图片超出屏幕 */
+            height: auto;       /* 保持比例 */
+            display: block;     /* 块级显示，方便居中 */
+            margin: 20px auto;  /* 上下留白 20px，左右自动居中 */
+            border-radius: 8px; /* 可选：给图片加点圆角更美观 */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 可选：加个淡淡的阴影 */
+        }
     </style>
 </head>
 <body>
